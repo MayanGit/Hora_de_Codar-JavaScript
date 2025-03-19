@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+
+<script>
+     alert("Vamos calcular a área de varias formas geométricas: ")
+
+     //Retangulo
+     var alturaR = parseInt(prompt("Informe a altura do retangulo: "))
+     var baseR =  parseInt(prompt("Informe a base do retangulo: "))
+
+     alert("Retangulo: " + (baseR * alturaR)) 
+      
+
+    //Quadrado
+     var lado =  parseInt(prompt ("Informe o valor do lado do quadrado: "))
+
+     alert("Quadrado: " + (lado*lado))
+
+
+    //Losango
+     var diagonal_maior =  parseInt(prompt("Informe o valor da diagonal maior do losango: "))     
+     var diagonal_menor =  parseInt(prompt("Informe o valor da diagonal menor do losango: "))
+
+     alert("Losango: " + (diagonal_maior*diagonal_menor/2))
+      
+
+    //Trapézio
+     var base_maior =  parseInt(prompt ("Informe o valor da base maior do Trapézio: "))
+     var base_menor =  parseInt(prompt ("Informe o valor da base menor do Trapézio: "))
+     var h =  parseInt(prompt ("Informe o valor da altura do Trapézio: "))
+
+     alert("Trapézio: " + (((base_maior+base_menor)*h)/2))
+
+
+    //Paralelograma
+     var alturaP =  parseInt(prompt ("Informe a altura do Paralelograma: "))
+     var baseP =  parseInt(prompt ("Informe a base do Paralelograma: "))
+
+     alert ("Paralelograma: " + (baseP * alturaP))
+      
+
+    //Triângulo
+     var alturaT =  parseInt(prompt ("Informe a altura do Triângulo: "))
+     var baseT =  parseInt(prompt ("Informe a base do Triângulo: "))
+
+     alert ("Triângulo: " + ((baseT * alturaT)/2))
+
+
+    //Circulo
+     const pi = 3.14
+     var raio =  parseInt(prompt ("Informe o raio do Circulo: "))
+
+     alert("Circulo: " + ((raio * raio)*pi))
+
+      </script>
+</head>
+<body>
+    
+</body>
+</html>
