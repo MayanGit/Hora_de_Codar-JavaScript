@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício_8</title>
+</head>
+
+<body>
+    <script>
+        function inicio() {
+            var n1 = parseInt(prompt("Informe a primeira nota: "))
+            var soma = 0
+
+            if (n1 < 0 || n1 > 10) {
+                n1 = parseInt(prompt("Coloque um valor entre 0 e 10: "))
+                soma = soma + n1
+            }
+
+            else {
+                soma = soma + n1
+            }
+            var n2 = parseInt(prompt("Informe a segunda nota: "))
+            if (n2 < 0 || n2 > 10) {
+                n2 = parseInt(prompt("Coloque um valor entre 0 e 10: "))
+                soma = soma + n2
+            }
+
+            else {
+                soma = soma + n2
+            }
+            var n3 = parseInt(prompt("Informe a terceira nota: "))
+            if (n3 < 0 || n3 > 10) {
+                n3 = parseInt(prompt("Coloque um valor entre 0 e 10: "))
+                soma = soma + n3
+            }
+
+            else {
+                soma = soma + n3
+            }
+            var n4 = parseInt(prompt("Informe a quarta nota: "))
+            if (n4 < 0 || n4 > 10) {
+                n4 = parseInt(prompt("Coloque um valor entre 0 e 10: "))
+                soma = soma + n4
+            }
+
+            else {
+                soma = soma + n4
+            }
+
+
+            var media = soma / 4
+
+            if (media > 5) {
+                document.write("Você passou")
+            }
+            else {
+                document.write("Sinto muito, estude e tente novamente.")
+            }
+        }
+        inicio()
+    </script>
+</body>
+
+</html>
