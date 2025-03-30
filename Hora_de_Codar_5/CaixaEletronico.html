@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício_1</title>
+</head>
+
+<body>
+    <script>
+        /*1 ok,2 ok,3 ok,4 ok,5 ok,6 ok,7 ok,8 ok,9 ok,10 ok,11 ok,12 ok,13 ok*/
+
+        var saldo = 150.00
+        var nome
+        var senha = 3589
+
+        function inicio() {
+
+            nome = prompt("Qual seu nome? ")
+            alert("Olá " + nome + " é um prazer ter você aqui!")
+
+            opcoes()
+        }
+        function opcoes() {
+
+            var opcao
+
+            opcao = parseInt(prompt("Escolha uma opção: \n"
+                + "1. Ver saldo\n"
+                + "2. Ver extrato\n"
+                + "3. Fazer depósito\n"
+                + "4. Fazer saque\n"
+                + "5. Fazer transferência\n"
+                + "6. Sair\n"
+            ))
+
+            alert("A opção selecionada foi: " + opcao)
+
+            switch (opcao) {
+                case 1:
+                    verSaldo()
+                    break
+                case 2:
+                    verExtrato()
+                    break
+                case 3:
+                    fazerDeposito()
+                    break
+                case 4:
+                    fazerSaque()
+                    break
+                case 5:
+                    fazerTransferencia()
+                    break
+                case 6:
+                    sair()
+                    break
+                default:
+                    erro()
+            }
+        }
+
+        function verExtrato() {
+
+            var senha1
+
+            senha1 = prompt("Digite a senha? ")
+
+            while (senha1 != senha) {
+                alert("Senha inválida!")
+                verExtrato()
+            }
+
+            alert("Saque: R$-150,00 \n"
+                + "Depósito: R$200,00 \n"
+                + "Transferência: R$-200,00 \n"
+                + "Pix recebido: R$350,00 \n"
+                + "Compra: R$-60,00\n")
+
+            opcoes()
+        }
+
+        function verSaldo() {
+            var senha1
+
+            senha1 = prompt("Digite a senha? ")
+
+            while (senha1 != senha) {
+                alert("Senha inválida!")
+                verSaldo()
+            }
+            alert("Seu saldo atual é: " + saldo + "\n")
+            opcoes()
+        }
+
+        function fazerDeposito() {
+
+            var deposito
+
+            deposito = parseFloat(prompt("Qual o valor para depósito? "))
+
+            if (deposito <= 0) {
+                erro()
+            } else {
+                saldo = saldo + deposito
+                verSaldo()
+            }
+        }
+
+        function fazerSaque() {
+
+            var saque, resto
+            var senha1
+
+            senha1 = prompt("Digite a senha? ")
+
+            while (senha1 != senha) {
+                alert("Senha inválida!")
+                fazerSaque()
+            }
+
+            saque = parseFloat(prompt("Qual o valor para saque? "))
+
+            resto = saldo - saque
+
+            if (resto > 0) {
+                if (saque <= 0) {
+                    erro()
+                }
+                else {
+                    saldo = saldo - saque
+                    verSaldo()
+                }
+            }
+            else {
+                erro()
+            }
+        }
+
+        function fazerTransferencia() {
+
+            var transferencia, resto
+            var senha1
+
+            senha1 = prompt("Digite a senha? ")
+
+            while (senha1 != senha) {
+                alert("Senha inválida!")
+                fazerTransferencia()
+            }
+
+            transferencia = parseFloat(prompt("Qual o valor para transferência? "))
+
+            resto = saldo - transferencia
+
+            if (resto > 0) {
+                if (transferencia <= 0) {
+                    erro()
+                }
+                else {
+                    saldo = saldo - transferencia
+                    verSaldo()
+                }
+            }
+            else {
+                erro()
+            }
+        }
+
+        function erro() {
+            alert("Operação inválida!")
+            opcoes()
+        }
+
+        function sair() {
+            alert(nome + ", foi um prazer ter você por aqui!")
+        }
+        inicio()
+    </script>
+</body>
+
+</html>
