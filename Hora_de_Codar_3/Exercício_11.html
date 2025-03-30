@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício_11</title>
+</head>
+
+<body>
+    <script>
+        //Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário.
+
+        function inicio() {
+
+            var m, n, v = 1
+
+            m = parseInt(prompt("Qual número vc quer a tabuada? "))
+
+            n = parseInt(prompt("Até qual tabuada você quer? "))
+
+            while (v <= n) {
+                document.write(m + " x " + v + " = " + (m * v) + "<br>")
+                v++
+            }
+        }
+        inicio()
+    </script>
+</body>
+
+</html>

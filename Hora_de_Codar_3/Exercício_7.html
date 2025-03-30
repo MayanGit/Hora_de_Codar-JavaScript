@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício_7</title>
+</head>
+
+<body>
+    <script>
+        // Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. 
+        //Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
+        //Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário. 
+
+        function inicio() {
+
+            var mat, port, fis, geo, hist, bio, soma
+
+            mat = parseInt(prompt("coloque sua nota em Matemática: "))
+            while (mat < 0 || mat > 10) {
+                mat = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+            }
+
+
+            port = parseInt(prompt("coloque sua nota em Português: "))
+            while (port < 0 || port > 10) {
+                port = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+            }
+
+            fis = parseInt(prompt("coloque sua nota em Física: "))
+            while (fis < 0 || fis > 10) {
+                fis = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+            }
+
+            geo = parseInt(prompt("coloque sua nota em Geografia: "))
+            while (geo < 0 || geo > 10) {
+                geo = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+            }
+
+
+            hist = parseInt(prompt("coloque sua nota em História: "))
+            while (hist < 0 || hist > 10) {
+                hist = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+            }
+
+            bio = parseInt(prompt("coloque sua nota em Biologia: "))
+            while (bio < 0 || bio > 10) {
+                bio = parseInt(prompt("Por favor escrever uma nota válida (entre 0 e 10): "))
+            }
+
+            soma = (mat + port + fis + geo + hist + bio) / 6
+
+            document.write("Sua média é: " + soma + "<br>")
+
+            if (soma >= 6) {
+                document.write("Parabéns você passou!!!!")
+            }
+
+            else {
+                document.write("É parceiro não foi dessa vez.")
+            }
+        }
+        inicio()
+    </script>
+</body>
+
+</html>

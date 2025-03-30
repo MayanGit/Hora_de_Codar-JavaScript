@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício_5</title>
+</head>
+
+<body>
+    <script>
+        // Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário
+        // e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.        
+
+        function inicio() {
+
+            var n1 = parseInt(prompt("Informe um número: "))
+            var n2 = parseInt(prompt("Informe um número menor que o anterior: "))
+            while (n2 >= n1) {
+                n2 = parseInt(prompt("Informar um número menor que o primeiro digitado: "))
+            }
+            var soma = 0, v = 0
+
+                while(n1 >= n2) {
+                document.write(n1, "<br>")
+                soma = soma + n1
+                n1 = n1 - 1
+                v = v + 1
+            }
+            document.write("O resultado da média aritmética entre todos os números que estão entre os informados: <br>", soma / v)
+        }
+        inicio()
+    </script>
+</body>
+
+</html>
